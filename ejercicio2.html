@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .mienlace{
+            color: green;
+            text-decoration: none;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Titulo de la pagina</h1>
+    <h2>Subtitulo de la pagina</h2>
+
+    <p> 1. Primer Parrafo   </p>
+    <p id="parr"> 2. Segundo Parrafo   </p>
+    <p> 3. Tercer Parrafo   </p>
+
+    <script>
+        //let elementosP = document.getElementsByTagName("p");
+
+        // let elem = document.getElementById("parr");
+        // elem.innerText = "¡ Segundo elemento modificado !"
+
+        elemento = document.createElement("p");
+        textoparrafo = document.createTextNode("4. Soy un nuevo parrafo");
+        elemento.appendChild(textoparrafo);
+        document.body.appendChild(elemento);
+
+        ele = document.createElement("a")
+        textoparrafo = document.createTextNode("Soy un enlace");
+        ele.appendChild(textoparrafo);
+        ele.setAttribute("href","#");
+        ele.setAttribute("class","mienlace");
+        document.body.appendChild(ele);
+
+
+    </script>
+
+</body>
+</html>
