@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>Listado de frutas</p>
+    
+    <input type="text" name="inputfruta" id="inputfruta">
+    <button id="btfruta">Agregar un elemento</button>
+
+    <ul id="frutas">
+        <li>Manzana</li>
+        <li>Pera</li>
+    </ul>
+
+    <script>
+        button = document.getElementById("btfruta");
+        button.addEventListener("click", agregarElemento);
+
+        function agregarElemento(){
+            ul = document.getElementById("frutas");
+
+            li = document.createElement("li");
+            li.setAttribute("id",document.getElementById("inputfruta").value);
+            li.setAttribute("onclick","quitarElemento(this)");
+            texto_li = document.createTextNode(document.getElementById("inputfruta").value);
+            li.appendChild(texto_li);
+
+            ul.appendChild(li);
+
+
+
+        }
+
+        function quitarElemento(elemento){
+            var id=elemento.getAttribute("id");
+            node=document.getElementById(id);
+            node.parentNode.removeChild(node);
+
+
+        }
+
+
+    </script>
+</body>
+</html>
