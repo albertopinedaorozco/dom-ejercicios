@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+   <style>
+       ul{
+           font-family:Georgia, 'Times New Roman', Times, serif;
+           border: 1px solid red;
+           list-style: none;
+           font-size: 18px;
+
+       }
+   </style>
+
+</head>
+<body>
+    <h1>Lista de elementos</h1>
+
+    <input type="text" name="txt" id="txt">
+    <button id="boton">Agregar elemento</button>
+
+    <ul id="lista">
+        
+    </ul>
+
+   <script>
+       button = document.getElementById("boton");
+       button.addEventListener("click", agregar);
+
+
+       function agregar(e){
+            
+            digitado = document.getElementById("txt").value;
+
+            li = document.createElement("li");
+            nodotexto = document.createTextNode(digitado);
+            li.appendChild(nodotexto);
+
+            ul = document.getElementById("lista");
+            ul.appendChild(li);
+            
+            console.log(e.target);
+                    
+
+
+       }
+
+
+
+   </script>
+    
+</body>
+</html>

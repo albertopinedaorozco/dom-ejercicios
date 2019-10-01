@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    <h1>Evento</h1>
+    <button id="boton">Mostrar mensaje</button>
+    <input type="text" name="" id="txt">
+
+    <script>
+        button = document.getElementById("boton");
+        button.addEventListener("click",mostrarMensaje);
+        
+        txt = document.getElementById("txt");
+        txt.addEventListener("keypress", mostrarTexto)
+
+        function mostrarMensaje(){
+            alert("Todo bien");
+            console.log("Dentro de la funcion");
+        }
+
+        function mostrarTexto(){
+            alert(txt.value);
+        }
+
+    </script>
+
+</body>
+</html>
